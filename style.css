@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+.container {
+    margin: auto;
+    width: 80vw;
+    height: 90vh;
+}
+.calendar-cnt {
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+.calendar-header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+}
+.calendar-header h1 {
+    margin: auto 40px;
+    font-weight: lighter;
+}
+.calendar-row-container {
+    width: 100%;
+    height: 90%;
+}
+.calendar-day {
+    position: relative;
+    float: left;
+    padding: 10px;
+    width: calc(100% / 7);
+    height: calc(100% / 6);
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+.calendar-day-holiday-name {
+    position: absolute;
+    margin: 0 5px;
+    right: 0;
+    bottom: 5px;
+}
+.calendar-day.holiday {
+    background: #ffeeff;
+}
+.calendar-day:nth-child(7n) {
+    border-right: 0;
+}
+.calendar-day:nth-child(n + 36) {
+    border-bottom: 0;
+}
